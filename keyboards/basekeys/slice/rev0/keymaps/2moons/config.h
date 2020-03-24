@@ -1,4 +1,4 @@
-/* Copyright 2020 2Moons
+/* Copyright 2018 Salicylic_acid3
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,3 +20,4 @@
 
 #define TAPPING_FORCE_HOLD
 #define TAPPING_TERM 180
+//#define MASTER_RIGHT

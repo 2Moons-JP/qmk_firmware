@@ -1,4 +1,4 @@
-/* Copyright 2020 2Moons
+/* Copyright 2018 Salicylic_acid3
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,7 +15,7 @@
  */
 
 #pragma once
-
+#define EE_HANDS
 /* Select hand configuration */
 
 #define TAPPING_FORCE_HOLD
