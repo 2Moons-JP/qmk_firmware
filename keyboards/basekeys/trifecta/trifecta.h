@@ -17,6 +17,8 @@
 
 #include "quantum.h"
 
+#define XXX KC_NO//readabilty 
+
 /* This a shortcut to help you visually see your layout.
  *
  * The first section contains all of the arguments representing the physical
@@ -26,16 +28,21 @@
  * represents the switch matrix.
  */
 #define LAYOUT( \
-    k00, k01, k02, k03, k04, k05, k06,           k07, k08, k09, k0A, k0B, k0C, k0D,  k0E,    \
-    k10, k11, k12, k13, k14, k15,           k16, k17, k18, k19, k1A, k1B, k1C, k1D,  k1E,   \
-    k20, k21, k22, k23, k24, k25,           k26, k27, k28, k29, k2A, k2B,      k2D,  k2E,    \
-    k30, k31, k32, k33, k34, k35,           k36, k37, k38, k39, k3A, k3B, k3C, k3D,         \
-    k40, k41, k42,      k44,                     k47,      k49, k4A, k4B, k4C, k4D,  k4E    \
+    k10,  k01,  k11,  k02,  k12,  k03,  k13,      k04,  k14,  k05,  k15,  k06,  k16,  k07,  k17,          k37,  \
+    k30,  k21,  k31,  k22,  k32,  k23,            k33,  k24,  k34,  k25,  k35,  k26,  k36,  k27,          k57,  \
+    k40,  k51,  k41,  k52,  k42,  k53,            k43,  k54,  k44,  k55,  k45,  k56,  k47,                k77,  \
+    k70,  k61,  k71,  k62,  k72,  k63,            k73,  k64,  k74,  k65,  k75,  k66,  k76,          k67,        \
+    k90,  k81,        k91,        k82,                  k94,        k85,  k95,  k86,          k96,  k87,  k97   \
 ) \
 { \
-    { k00,   k01,   k02,   k03,   k04,   k05,   k06,   k07,   k08,   k09,   k0A,   k0B,   k0C,   k0D,   k0E }, \
-    { k10,   k11,   k12,   k13,   k14,   k15,   k16,   k17,   k18,   k19,   k1A,   k1B,   k1C,   k1D,   k1E }, \
-    { k20,   k21,   k22,   k23,   k24,   k25,   k26,   k27,   k28,   k29,   k2A,   k2B,   KC_NO, k2D,   k2E }, \
-    { k30,   k31,   k32,   k33,   k34,   k35,   k36,   k37,   k38,   k39,   k3A,   k3B,   k3C,   k3D,   KC_NO }, \
-    { k40,   k41,   k42,   KC_NO, k44, KC_NO, KC_NO,   k47, KC_NO,   k49,   k4A,   k4B,   k4C,   k4D,   k4E } \
+   { XXX,  k01,  k02,  k03,  k04,  k05,  k06,  k07}, \
+   { k10,  k11,  k12,  k13,  k14,  k15,  k16,  k17}, \
+   { XXX,  k21,  k22,  k23,  k24,  k25,  k26,  k27}, \
+   { k30,  k31,  k32,  k33,  k34,  k35,  k36,  k37}, \
+   { k40,  k41,  k42,  k43,  k44,  k45,  XXX,  k47}, \
+   { XXX,  k51,  k52,  k53,  k54,  k55,  k56,  k57}, \
+   { XXX,  k61,  k62,  k63,  k64,  k65,  k66,  k67}, \
+   { k70,  k71,  k72,  k73,  k74,  k75,  k76,  k77}, \
+   { XXX,  k81,  k82,  XXX,  XXX,  k85,  k86,  k87}, \
+   { k90,  k91,  XXX,  XXX,  k94,  k95,  k96,  k97}  \
 }
