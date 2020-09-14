@@ -41,11 +41,35 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 void encoder_update_user(uint8_t index, bool clockwise) {
-    if (index == 0) { /* First encoder */
-        if (clockwise) {
-            tap_code(KC_VOLU);
-        } else {
-            tap_code(KC_VOLD);
+     if (index == 0) { /* First encoder */
+        if(rgb_matrix_get_flags() == LED_FLAG_UNDERGLOW) {
+            if (clockwise) { 
+                rgblight_step();
+            } else {
+                rgblight_step_reverse();
+            }
+        } 
+      else if (IS_LAYER_ON(_FN)) {
+          if(rgb_matrix_get_flags() == LED_FLAG_KEYLIGHT) {
+            if (clockwise) { 
+                rgblight_step();
+            } else {
+                rgblight_step_reverse();
+        }
+      if (index == 0) { /* First encoder */
+        if(rgb_matrix_get_flags() == LED_FLAG_UNDERGLOW) {
+            if (clockwise) { 
+                rgblight_step();
+            } else {
+                rgblight_step_reverse();
+            }
+        } 
+      else if (IS_LAYER_ON(_FN)) {
+          if(rgb_matrix_get_flags() == LED_FLAG_KEYLIGHT) {
+            if (clockwise) { 
+                rgblight_step();
+            } else {
+                rgblight_step_reverse();
         }
     } else if (index == 1) { /* Second encoder */
         if (clockwise) {
@@ -61,7 +85,8 @@ void encoder_update_user(uint8_t index, bool clockwise) {
         }
     }
 }
-
+}
+}
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     switch (keycode) {
