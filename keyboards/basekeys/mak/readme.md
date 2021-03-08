@@ -1,6 +1,6 @@
-# Slice
+# MAK Divide 65
 
-![slice](https://i.imgur.com/l2aVaGx.jpg)
+![MAK Divide 65](https://i.imgur.com/zNPZbpP.jpg)
 
 This is 71 keys Custom keyboard.
 
